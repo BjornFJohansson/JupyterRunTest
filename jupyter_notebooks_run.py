@@ -10,7 +10,7 @@ import nbformat
 from nbconvert.preprocessors.execute import ExecutePreprocessor
 
 try:
-    filter_files = sys.argv[1:]
+    filter_files = sys.argv[1]
 except IndexError:
     filter_files = None
 

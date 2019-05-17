@@ -8,7 +8,7 @@ import nbformat
 from nbconvert import HTMLExporter
 
 try:
-    filter_files = sys.argv[1:]
+    filter_files = sys.argv[1]
 except IndexError:
     filter_files = None
 
