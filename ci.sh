@@ -11,14 +11,16 @@ source activate testenv
 which python
 python --version
 
+shopt -s globstar
+
 #conda install <optional dependencies>
 
 
 # run all notebooks in current folder and subfolders
-jupyter nbconvert --ExecutePreprocessor.kernel_name=python3 --execute --inplace --allow-errors **/[^_^.]*.ipynb
+jupyter nbconvert --ExecutePreprocessor.kernel_name=python3 --execute --inplace --allow-errors notebooks/**/[^_^.]*.ipynb
 
 # pytest all notebooks in current folder and subfolders
-pytest --current-env --verbose --capture=no --nbval **/[^_^.]*.ipynb
+pytest --current-env --verbose --capture=no --nbval notebooks/**/[^_^.]*.ipynb
 
 # convert all notebooks in current folder and subfolders to html
-jupyter nbconvert **/[^_^.]*.ipynb
+jupyter nbconvert notebooks/**/[^_^.]*.ipynb
