@@ -45,6 +45,7 @@ for dirpath, dirnames, filenames in os.walk(thisdir):
 
         pp = ExecutePreprocessor()
         pp.timeout = 120 # seconds
+        pp.kernel_name= "python3"
         pp.interrupt_on_timeout = True
         
         with open(pth, 'r', encoding='utf-8') as f: 
@@ -53,7 +54,7 @@ for dirpath, dirnames, filenames in os.walk(thisdir):
         from nbconvert.preprocessors import CellExecutionError
         
         try:
-            nb_executed, resources = pp.preprocess(nb, resources={})
+            nb_executed, resources = pp.preprocess(nb, resources={})  # --ExecutePreprocessor.kernel_name=python3
         except CellExecutionError as err:
             print(colored(dirpath,"red"), colored(file_,"red"), "CellExecutionError")
             notebooks_w_errors.append(pth) 

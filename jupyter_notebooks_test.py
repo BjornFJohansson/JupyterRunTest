@@ -38,7 +38,7 @@ for dirpath, dirnames, filenames in sorted(os.walk(thisdir)):
         
         print(colored(dirpath,"blue"), colored(file_,"red"))
         
-        exit_=pytest.cmdline.main( ["--verbose", "--capture=no", "--nbval", file_] )
+        exit_=pytest.cmdline.main( ["--current-env", "--verbose", "--capture=no", "--nbval", file_] )
         if exit_:
             notebooks_w_errors.append(p)                    
             exits+=exit_
