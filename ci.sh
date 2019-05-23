@@ -13,4 +13,12 @@ python --version
 
 #conda install <optional dependencies>
 
-python jupyter_notebooks_test.py
+
+# run all notebooks in current folder and subfolders
+jupyter nbconvert --ExecutePreprocessor.kernel_name=python3 --execute --inplace --allow-errors **/[^_^.]*.ipynb
+
+# pytest all notebooks in current folder and subfolders
+pytest --current-env --verbose --capture=no --nbval **/[^_^.]*.ipynb
+
+# convert all notebooks in current folder and subfolders to html
+jupyter nbconvert **/[^_^.]*.ipynb
