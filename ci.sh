@@ -6,7 +6,7 @@ rm Miniconda_latest.sh
 conda config --set always_yes yes --set show_channel_urls yes
 conda update conda
 conda config --add channels conda-forge
-conda create -qy -n testenv python=3.7 pytest nbval termcolor
+conda create -qy -n testenv python=3.7 nbconvert pytest nbval termcolor
 source activate testenv
 which python
 python --version
