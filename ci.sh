@@ -20,12 +20,13 @@ shopt -s globstar
 # notebooks with names starting with a dot . or an underscore _ are ignored.
 
 # command to run all notebooks
-jupyter nbconvert --ExecutePreprocessor.kernel_name=python3 --execute --inplace --allow-errors notebooks/**/[^_^.]*.ipynb
+# jupyter nbconvert --ExecutePreprocessor.kernel_name=python3 --execute --inplace --allow-errors notebooks/**/[^_^.]*.ipynb
 
-#command to convert all notebooks
-jupyter nbconvert notebooks/**/[^_^.]*.ipynb
+# command to convert all notebooks
+# jupyter nbconvert notebooks/**/[^_^.]*.ipynb
 
-#command to test all notebooks
+# command to test all notebooks
+
 pytest --current-env --verbose --capture=no --nbval notebooks/**/[^_^.]*.ipynb
 
 
