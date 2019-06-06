@@ -22,8 +22,12 @@ shopt -s globstar
 # command to run all notebooks
 jupyter nbconvert --ExecutePreprocessor.kernel_name=python3 --execute --inplace --allow-errors notebooks/**/[^_^.]*.ipynb
 
+#command to convert all notebooks
+jupyter nbconvert notebooks/**/[^_^.]*.ipynb
+
 #command to test all notebooks
 pytest --current-env --verbose --capture=no --nbval notebooks/**/[^_^.]*.ipynb
 
-#command to convert all notebooks
-jupyter nbconvert notebooks/**/[^_^.]*.ipynb
+
+
+exit $?
