@@ -12,7 +12,7 @@ This repository has a collection of Jupyter notebooks:
 
 These notebooks are tested regularly on a Linux continuous integration server hosted by Travis CI: 
 
-[![Build Status](https://travis-ci.org/BjornFJohansson/JupyterRunTest.svg?branch=master)](https://travis-ci.org/BjornFJohansson/JupyterRunTest)
+[![Build Status](https://travis-ci.org/BjornFJohansson/JupyterRunTest.svg)](https://travis-ci.org/BjornFJohansson/JupyterRunTest)
 
 Alongside each notebook there is a html version with the same name but with a `.html` extension instead of `.ipynb`.
 
