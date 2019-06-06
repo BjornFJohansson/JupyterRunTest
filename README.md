@@ -22,7 +22,7 @@ Notebooks can be explored live online using binder. Click on the binder badge an
 
 Binder settings:
 
-![binder](binder.png)
+![binder](references/binder.png)
 
 
 
@@ -31,7 +31,7 @@ Project Organization
 
 	├── README.md               <= this file. Should have links to notebooks
 	├── ci.sh                   <= This script contains
-	├── environment.yml 
+	├── environment.yml         <= Contains all dependencies to run notebooks
 	├── data
 	│   ├── raw                 <= raw data used in the project
 	│   └── processed           <= processed data used in the project

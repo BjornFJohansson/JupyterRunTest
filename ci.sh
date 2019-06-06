@@ -9,7 +9,7 @@ rm Miniconda_latest.sh
 conda config --set always_yes yes --set show_channel_urls yes
 conda update conda
 conda env create -f environment.yml
-conda activate testenvironment
+source activate testenvironment
 conda install pytest nbconvert nbval termcolor
 
 shopt -s globstar
