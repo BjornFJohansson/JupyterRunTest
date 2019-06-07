@@ -24,10 +24,10 @@ shopt -s globstar extglob
 cd notebooks
 
 # command to run all notebooks
-jupyter nbconvert --ExecutePreprocessor.kernel_name=python3 --execute --inplace --allow-errors **/[^_^.]*.ipynb
+# jupyter nbconvert --ExecutePreprocessor.kernel_name=python3 --execute --inplace --allow-errors **/[^_^.]*.ipynb
 
 #command to convert all notebooks
-jupyter nbconvert **/[^_^.]*.ipynb
+# jupyter nbconvert **/[^_^.]*.ipynb
 
 #command to test all notebooks
 pytest --current-env --verbose --capture=no --nbval **/[^_^.]*.ipynb
