@@ -21,14 +21,16 @@ shopt -s globstar
 # Probably running and converting should be turned off when the notebooks are ready for publication
 # notebooks with names starting with a dot . or an underscore _ or in such folders are ignored.
 
+cd notebooks
+
 # command to run all notebooks
-jupyter nbconvert --ExecutePreprocessor.kernel_name=python3 --execute --inplace --allow-errors notebooks/[^_^.]**/[^_^.]*.ipynb
+jupyter nbconvert --ExecutePreprocessor.kernel_name=python3 --execute --inplace --allow-errors [^_^.]**/[^_^.]*.ipynb
 
 #command to convert all notebooks
-jupyter nbconvert notebooks/[^_^.]**/[^_^.]*.ipynb
+jupyter nbconvert [^_^.]**/[^_^.]*.ipynb
 
 #command to test all notebooks
-pytest --current-env --verbose --capture=no --nbval notebooks/[^_^.]**/[^_^.]*.ipynb
+pytest --current-env --verbose --capture=no --nbval [^_^.]**/[^_^.]*.ipynb
 
 
 
