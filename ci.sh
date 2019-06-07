@@ -14,11 +14,8 @@ conda config --add channels conda-forge
 conda install pytest nbconvert nbval termcolor
 
 
-shopt
-
-
 # This is to make sure double stars ** works
-shopt -s globstar
+shopt -s globstar extglob
 
 # This script runs, tests and converts (to html) all Jupyter notebooks in /notebooks
 # Probably running and converting should be turned off when the notebooks are ready for publication
