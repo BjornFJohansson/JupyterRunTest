@@ -14,6 +14,9 @@ conda config --add channels conda-forge
 conda install pytest nbconvert nbval termcolor
 
 
+shopt
+
+
 # This is to make sure double stars ** works
 shopt -s globstar
 
@@ -24,13 +27,13 @@ shopt -s globstar
 cd notebooks
 
 # command to run all notebooks
-jupyter nbconvert --ExecutePreprocessor.kernel_name=python3 --execute --inplace --allow-errors [^_^.]**/[^_^.]*.ipynb
+jupyter nbconvert --ExecutePreprocessor.kernel_name=python3 --execute --inplace --allow-errors **/[^_^.]*.ipynb
 
 #command to convert all notebooks
-jupyter nbconvert [^_^.]**/[^_^.]*.ipynb
+jupyter nbconvert **/[^_^.]*.ipynb
 
 #command to test all notebooks
-pytest --current-env --verbose --capture=no --nbval [^_^.]**/[^_^.]*.ipynb
+pytest --current-env --verbose --capture=no --nbval **/[^_^.]*.ipynb
 
 
 
