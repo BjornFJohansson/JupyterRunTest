@@ -27,7 +27,7 @@ shopt -s globstar
 
 # command to test all notebooks
 
-pytest --current-env --verbose --capture=no --nbval notebooks/**/[^_^.]*.ipynb
+pytest --current-env --verbose --capture=no --nbval notebooks/[^_^.]**/[^_^.]*.ipynb
 
 
 
