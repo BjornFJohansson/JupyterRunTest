@@ -29,4 +29,4 @@ returncode=$?
 
 
 
-exit returncode
+exit $returncode
