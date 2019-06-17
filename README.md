@@ -24,19 +24,19 @@ Alongside each notebook there is a html version with the same name but with a `.
 
 Notebooks can be explored live online using binder. Click on the binder badge and wait for binder to start.
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/BjornFJohansson/JupyterRunTest/master?filepath=notebooks%2Findex.ipynb)
+[![binder_link](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/BjornFJohansson/JupyterRunTest/master?filepath=notebooks%2Findex.ipynb)
 
 Binder settings:
 
-![binder](references/binder.png)
+![binder](notebooks/references/binder.png)
 
 
 
 Project Organization
 --------------------------
 
-	├── README.md               <= this file. Should have links to notebooks
-	├── ci.sh                   <= This script contains
+
+	├── ci.sh                   <= This script contains 
 	├── environment.yml         <= Contains all dependencies to run notebooks
 	├── data
 	│   ├── raw                 <= raw data used in the project
@@ -56,6 +56,31 @@ Project Organization
 	│       └── insubfoldr.ipynb
 	└── references              <= Put all references such as papers, manuals etc.
 	    └── binder.png          <= This image show basic binder settings
+
+
+    ├── ci.sh                   <= This shell script creates a conda test enviroment based on the environment.yml file
+    ├── environment.yml         <= Put all dependencies to run notebooks here
+    ├── LICENSE                 <= Some liberal software licence
+    ├── notebooks               <= Put Jupyter notebooks here.
+    │   ├── data
+    │   │   ├── processed      <= processed data used in the project
+    │   │   └── raw            <= raw data used in the project
+    │   ├── divbyzero2.html
+    │   ├── divbyzero2.ipynb
+    │   ├── divbyzero.html     <= a html version of a notebook 
+    │   ├── divbyzero.ipynb    <= a notebook 
+    │   ├── index.html
+    │   ├── index.ipynb
+    │   ├── nbcollector.py     <= This script can be run to collects and prints markdown links to all notebooks in the repository.
+    │   ├── references         <= Put all references such as papers, manuals etc.
+    │   │   └── binder.png
+    │   └── SubFolder
+    │       ├── deeper
+    │       │   └── insubfoldr.ipynb
+    │       ├── insubfoldr.html
+    │       └── insubfoldr.ipynb
+    └── README.md                              <= this file. Should have links to notebooks
+
 
 
 
