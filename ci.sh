@@ -23,14 +23,13 @@ shopt -s globstar
 
 cd notebooks
 
-# command to run all notebooks
-jupyter nbconvert --ExecutePreprocessor.kernel_name=python3 --execute --inplace --allow-errors **/*.ipynb
+./jupyter_notebooks_test.sh
 
-#command to convert all notebooks
-jupyter nbconvert **/*.ipynb
 
-#command to test all notebooks
-pytest --current-env --verbose --capture=no --nbval **/*.ipynb
+
+# You probably want to comment out the two lines below
+./jupyter_notebooks_run.sh
+./jupyter_notebooks_html.sh
 
 
 
