@@ -20,7 +20,7 @@ conda install pytest nbconvert nbval termcolor
 cd notebooks
 
 ./jupyter_notebooks_test.sh
-
+returncode=$?
 
 
 # You probably want to comment out the two lines below
@@ -29,4 +29,4 @@ cd notebooks
 
 
 
-exit $?
+exit returncode
