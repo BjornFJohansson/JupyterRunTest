@@ -2,4 +2,4 @@
 
 #command to convert all notebooks
 
-jupyter nbconvert **/*.ipynb
+jupyter nbconvert notebooks/**/*.ipynb

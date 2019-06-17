@@ -21,7 +21,6 @@ shopt -s globstar
 # Probably running and converting should be turned off when the notebooks are ready for publication
 # notebooks with names starting with a dot . or in a folder starting with a dot are ignored.
 
-cd notebooks
 
 ./jupyter_notebooks_test.sh
 
